@@ -12,7 +12,7 @@
 
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
-      <b-navbar-brand href="#">my-app</b-navbar-brand>
+      <b-navbar-brand href="#">nerdmetric</b-navbar-brand>
 
       <!-- If the viewport is small, the navbar collapses.
           Everything in b-collapse is what gets collapsed.
@@ -25,6 +25,8 @@
           <b-nav-item to="/about">About</b-nav-item>
           <b-nav-item to="/coins/bitcoin">Bitcoin</b-nav-item>
           <b-nav-item to="/coins/ethereum">Ethereum</b-nav-item>
+          <b-nav-item to="/profiles/">Profiles</b-nav-item>
+          <b-nav-item to="/search/:query">Search</b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
@@ -40,7 +42,7 @@
 
           <!-- The login option shows if the user is not authenticated -->
           <b-nav-item v-else>
-            <a @click="authenticate()">Login with GitHub</a>
+            <a @click="authenticate()">Login with ORCID</a>
           </b-nav-item>
 
         </b-navbar-nav>
@@ -106,6 +108,8 @@ export default {
         // TODO: do stuff here, like setting user info variables
         self.userInfo.username = resp.data.login;
         self.userInfo.avatar = resp.data.avatar_url;
+        self.userInfo.bio = resp.data.bio;
+        self.userInfo.github_link = resp.data.html_url;
       }).catch(() => {
         self.logout();
       });

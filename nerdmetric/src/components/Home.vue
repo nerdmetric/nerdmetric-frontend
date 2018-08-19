@@ -10,7 +10,7 @@
     how to render (i.e. which coin price to render).
 
     Check out the Profile page after logging in. It only renders correctly if the user is logged in.
-    
+
 
   </div>
 
@@ -24,7 +24,7 @@ export default {
   name: 'Home',
   data() {
     return {
-      msg: 'Welcome to your Vue app boilerplate',
+      msg: 'Welcome to nerdmetric',
     };
   },
 };
