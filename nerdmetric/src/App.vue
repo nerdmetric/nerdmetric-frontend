@@ -23,10 +23,8 @@
         <b-navbar-nav>
           <b-nav-item to="/" exact>Home</b-nav-item>
           <b-nav-item to="/about">About</b-nav-item>
-          <b-nav-item to="/coins/bitcoin">Bitcoin</b-nav-item>
-          <b-nav-item to="/coins/ethereum">Ethereum</b-nav-item>
-          <b-nav-item to="/profiles/">Profiles</b-nav-item>
-          <b-nav-item to="/search/:query">Search</b-nav-item>
+          <b-nav-item to="/users/">Users</b-nav-item>
+          <b-nav-item to="/search/">Search</b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->

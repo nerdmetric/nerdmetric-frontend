@@ -3,7 +3,9 @@ import Router from 'vue-router';
 import About from '@/components/About';
 import Home from '@/components/Home';
 import Profile from '@/components/Profile';
-import Coins from '@/components/Coins';
+import Users from '@/components/Users';
+import Search from '@/components/Search';
+
 
 Vue.use(Router);
 
@@ -20,14 +22,19 @@ export default new Router({
       component: About,
     },
     {
+      path: '/users/',
+      name: 'Users',
+      component: Users,
+    },
+    {
       path: '/profile',
       name: 'Profile',
       component: Profile,
     },
     {
-      path: '/coins/:id',
-      name: 'Coins',
-      component: Coins,
+      path: '/search',
+      name: 'Search',
+      component: Search,
     },
   ],
 });
